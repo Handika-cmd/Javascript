@@ -1,11 +1,11 @@
 // For Loop
-for (let i = 1; i <= 5; i++){
-    console.log("angka ke-",i);
+for ( a = 5; a <= 100; a += 5){
+    console.log("Angka Ke", a)
 }
 
-// While loop
-let i =1;
-while (i <= 10){
-    console.log("Angka ke-",i);
-    i++;
-}
+// // While loop
+// let i =1;
+// while (i <= 10){
+//     console.log("Angka ke-",i);
+//     i++;
+// }
