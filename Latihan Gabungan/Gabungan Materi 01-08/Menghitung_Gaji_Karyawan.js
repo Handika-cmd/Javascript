@@ -22,3 +22,9 @@ function hitungGaji (nama_Karyawan, gajiPokok, tunjangan, lembur, bonus, potonga
         status: status
     }
 }
+
+let daftarKaryawan = [
+    {nama: "Ririn", gajiPokok: 6800000, tunjangan: 1000000, lembur: 500000, bonus: 1500000, potongan: 700000},
+    {nama: "Handika", gajiPokok: 7500000, tunjangan: 1200000, lembur: 600000, bonus: 1000000, potongan: 800000},
+    {nama: "Budi", gajiPokok: 5000000, tunjangan: 800000, lembur: 300000, bonus: 500000, potongan: 600000}
+];
