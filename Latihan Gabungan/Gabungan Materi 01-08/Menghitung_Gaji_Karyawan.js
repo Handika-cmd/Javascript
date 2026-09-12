@@ -28,3 +28,20 @@ let daftarKaryawan = [
     {nama: "Handika", gajiPokok: 7500000, tunjangan: 1200000, lembur: 600000, bonus: 1000000, potongan: 800000},
     {nama: "Budi", gajiPokok: 5000000, tunjangan: 800000, lembur: 300000, bonus: 500000, potongan: 600000}
 ];
+
+for(let i = 0; i < daftarKaryawan.length; i++){
+    let karyawan = daftarKaryawan[i];
+    let hasil = hitungGaji(
+        karyawan.nama,
+        karyawan.gajiPokok,
+        karyawan.tunjangan,
+        karyawan.lembur,
+        karyawan.bonus,
+        karyawan.potongan
+    );
+
+    console.log(`Nama: ${hasil.nama}`);
+    console.log(`Gaji Bersih: Rp ${hasil.gajiBersih}`);
+    console.log(`Status: ${hasil.status}`);
+    console.log("---------------------------");
+}
