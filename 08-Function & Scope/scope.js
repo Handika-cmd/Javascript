@@ -3,19 +3,18 @@
 // =================================================================================
 // mari kita jelaskan bahwa ada 3 jenis utama tentang scope
 
-// 1. global scope
-let warna = "biru";
-function tampilWarna(){
-    console.log(warna);
+// latihan
+// 1. Global Scope
+let nama = "Handika Saputra";
+function sapa(){
+    console.log("Halo, ", nama);
+}
+sapa();
+
+// 2. local scope
+function namaLengkap(){
+    let nama = "Handika Saputra";
+    console.log(nama);
 }
 
-tampilWarna();
-console.log(warna);
-
-// 2. scope lokal
-function login(){
-    let password = "12345";
-    console.log(password);
-}
-login();
-console.log(password);
+namaLengkap();
