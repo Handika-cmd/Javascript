@@ -20,3 +20,7 @@ function perkenalan(nama){
 }
 perkenalan("Handika Saputra");
 console.log(perkenalan("Handika Saputra"));
+
+// Menghitung luas dengan arrow modern
+const luas = (panjang, lebar) => panjang * lebar;
+console.log(luas(5, 3));
