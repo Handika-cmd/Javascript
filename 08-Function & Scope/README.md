@@ -52,3 +52,16 @@ if(true){
 console.log(typeof b); // undefined
 
 **Lexical scope:** fungsi mencari variabel di scope tempat fungsi itu didefinisikan, bukan tempat dipanggil. Ini dasar closure.
+
+
+# 2.  Scope
+Sekarang masuk bagian kedua dari materi hari ini.
+**Scope = wilayah tempat sebuah variabel bisa diakses.**
+contoh kode sederhana:
+let nama = "Dika";
+
+function sapa() {
+    console.log(nama);
+}
+
+sapa();
