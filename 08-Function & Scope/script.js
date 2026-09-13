@@ -14,3 +14,9 @@ let gajiHandika = hitungGaji("Handika", 6500000);
 
 console.log("Gaji Bersih Ririn Dwi Aryanti: Rp. ", gajiRirin);
 console.log("Haji Bersih Handika Saputra: Rp. ", gajiHandika);
+
+function perkenalan(nama){
+    return "Nama saya, " + nama + "!!";
+}
+perkenalan("Handika Saputra");
+console.log(perkenalan("Handika Saputra"));
