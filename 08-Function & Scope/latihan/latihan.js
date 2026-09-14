@@ -20,4 +20,10 @@ function namaPengguna(nama, umur, hobi){
 
 let pengguna = namaPengguna("Handika Saputra", 22, "Belajar Programan");
 let pengguna1 = namaPengguna("Ririn Dwi Aryanti", 20, "Mam enak ama mam spageti")
-console.log(pengguna);
+console.log(pengguna, pengguna1);
+
+function angka(a, b){
+    return a + b;
+}
+let hasil = angka(33, 33);
+console.log(hasil);
