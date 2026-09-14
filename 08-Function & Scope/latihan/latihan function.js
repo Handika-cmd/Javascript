@@ -1,37 +1,20 @@
-function sapa(nama){
-    console.log("Halo, "+ nama);
-}
-sapa("Handika Saputra");
-sapa("Ririn Dwi Aryanti");
+// latihan menghitung DrumstickIcon
+function hitungDiskon(harga, diskon, jumlah){
+    let hargaTotal = 100000 * 5;
+    let hargaDiskon = hargaTotal * 0.2;
+    let hargaAkhir = hargaTotal - hargaDiskon;
 
-// Latihan 2 — Parameter
-function perkenalan(nama, umur){
-    console.log("Nama saya " + nama + ", umur " + umur + " tahun");
-}
-perkenalan("Dika", 22);
-perkenalan("Ririn Dwi Aryanti", 20);
-perkenalan("Rahmat Ramadan ", 300);
-
-
-// Latihan 3 - Return
-function namaPengguna(nama, umur, hobi){
-    return "Nama saya " + nama + ", umur " + umur + ", dan hobi " + hobi;
+    return hargaAkhir;
 }
 
-let pengguna = namaPengguna("Handika Saputra", 22, "Belajar Programan");
-let pengguna1 = namaPengguna("Ririn Dwi Aryanti", 20, "Mam enak ama mam spageti")
-console.log(pengguna, pengguna1);
+let hasil2 = hitungDiskon(100000, 0.2, 5);
+console.log(hasil2);
 
-function angka(a, b){
-    return a + b;
-}
-let hasil1 = angka(33, 33);
-console.log(hasil1);
-
-
-function hitungLuas(panjang, lebar){
-    return panjang * lebar;
+// hitung umur
+function hitungUmur(umurLahir){
+    umur = 2026 - umurLahir;
+    return umur;
 }
 
-let hasil = hitungLuas(30, 30);
+let hasil = hitungUmur(22);
 console.log(hasil);
