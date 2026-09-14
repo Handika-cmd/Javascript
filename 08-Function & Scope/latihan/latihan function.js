@@ -25,5 +25,13 @@ console.log(pengguna, pengguna1);
 function angka(a, b){
     return a + b;
 }
-let hasil = angka(33, 33);
+let hasil1 = angka(33, 33);
+console.log(hasil1);
+
+
+function hitungLuas(panjang, lebar){
+    return panjang * lebar;
+}
+
+let hasil = hitungLuas(30, 30);
 console.log(hasil);
