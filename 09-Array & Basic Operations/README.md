@@ -1,25 +1,103 @@
 # ARRAY & BASIC OPERATIONS ❤️❤️❤️
 
-Kalau **Function** tadi ngajarin kita cara membuat “mesin” yang bisa dipakai berulang, **Array** sekarang ngajarin kita cara menyimpan banyak data dalam satu variable.
+> Learning JavaScript — Array dan operasi dasar Array.
 
-## Membuat struktur dasar array
-let mahasiswa = ["Handika", "Ririn", "Rahmat"];
+## 🎯 Tujuan Belajar
 
-mahasiswa[0] = "HANDIKA";
-mahasiswa[1] = "RIRIN";
-mahasiswa[2] = "RAHMAT";
+Pada materi ini saya belajar:
+* Memahami konsep Array
+* Membuat Array
+* Mengakses data berdasarkan index
+* Mengubah nilai dalam Array
+* Menambahkan data dengan `push()`
+* Menghapus data dengan `pop()`
 
+## 📖 Ringkasan Materi
+
+Array digunakan untuk menyimpan beberapa nilai dalam satu variabel.
+
+Contoh:
+
+```javascript
+let mahasiswa = [
+    "Handika Saputra",
+    "Ririn Dwi Aryanti",
+    "Rahmat Ramadan"
+];
+```
+
+Setiap data memiliki posisi atau **index**. Index Array dimulai dari `0`.
+
+```javascript
 console.log(mahasiswa[0]);
-console.log(mahasiswa[1]);
-console.log(mahasiswa[2]);
-console.log(mahasiswa.length);
+```
 
-## Sekarang kita masuk konsep Array berikutnya: menambahkan data.
-**Misalnya awalnya:**
-let mahasiswa = ["Handika", "Ririn", "Rahmat"];
+Output:
 
-mahasiswa.push("Dwi Aryanti");
+```text
+Handika Saputra
+```
 
-console.log(mahasiswa.length);
+## 💻 Array Operations
 
-***push() → menambahkan data ke bagian paling belakang Array***
+### `push()`
+
+Digunakan untuk menambahkan data ke bagian akhir Array.
+
+```javascript
+mahasiswa.push("Abdurrahman");
+```
+
+### `pop()`
+
+Digunakan untuk menghapus data terakhir dari Array.
+
+```javascript
+mahasiswa.pop();
+```
+
+## 🧠 Yang Saya Pahami
+
+* Array dapat menyimpan banyak data dalam satu variabel.
+* Index Array dimulai dari `0`.
+* Data Array dapat diakses menggunakan index.
+* Nilai Array dapat diubah.
+* `push()` menambahkan data ke akhir Array.
+* `pop()` menghapus data terakhir Array.
+
+## 🛠️ Latihan
+
+* [x] Membuat Array
+* [x] Mengakses Array berdasarkan index
+* [x] Mengubah data Array
+* [x] Menggunakan `push()`
+* [x] Menggunakan `pop()`
+* [ ] Mencoba operasi Array lainnya
+
+## 📂 Struktur File
+
+| File         | Keterangan               |
+| ------------ | ------------------------ |
+| `index.html` | Struktur halaman latihan |
+| `script.js`  | Praktik JavaScript       |
+| `README.md`  | Dokumentasi materi       |
+
+## 🚧 Tantangan
+
+Saya masih perlu memperbanyak latihan agar lebih terbiasa menggunakan berbagai operasi pada Array.
+
+## ✅ Progress
+
+**Status:** 🟢 Selesai
+
+**Materi berikutnya:** [Isi setelah menentukan materi berikutnya]
+
+---
+
+### 📌 Learning Log
+
+**Tanggal:** 15 September 2026
+
+**Fokus:** Array & Array Operations
+
+**Hasil:** Memahami konsep dasar Array, index, perubahan data, serta penggunaan `push()` dan `pop()`.
