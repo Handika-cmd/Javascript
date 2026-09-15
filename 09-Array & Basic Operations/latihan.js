@@ -38,11 +38,11 @@ daftarBelanja.push("Apel");
 daftarBelanja.push("Mangga")
 
 console.log("Daftar Belanja: ", daftarBelanja);
-console.log(daftarBelanja.length);
+console.log("Jumlah Item: ", daftarBelanja.length);
 
 // mode hapus data menggunakan pop, shift
 daftarBelanja.pop();
 daftarBelanja.shift();
 
 console.log("Daftar Belanja Setelah diPop-shift", daftarBelanja);
-console.log(daftarBelanja.length);
+console.log("Daftar Belanja Setelah diPop-shift", daftarBelanja.length);
