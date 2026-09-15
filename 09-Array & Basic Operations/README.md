@@ -11,6 +11,7 @@ Pada materi ini saya belajar:
 * Mengubah nilai dalam Array
 * Menambahkan data dengan `push()`
 * Menghapus data dengan `pop()`
+* menghapus atau menambahkan data dengan `splice()`
 
 ## 📖 Ringkasan Materi
 
@@ -55,6 +56,13 @@ Digunakan untuk menghapus data terakhir dari Array.
 ```javascript
 mahasiswa.pop();
 ```
+## `splice()`
+digunakan ketika kita ingin menambah, menghapus, atau mengganti data di posisi tertentu.
+contoh:
+let buah = ["Apel", "Jeruk", "Mangga", "Pisang"];
+buah.splice(1, 1); ---> menghapus mulai dari index 1 dan jumlah dihapus 1 data.
+buah.splice(2, 0, "Durian", "Srikaya"); ---> menambahkan 2 data di mulai dari index 2.
+buah.splice(1, 2, "Anggur", "Manggis"); ---> mengubah 2 data di mulai dari index 1.
 
 ## 🧠 Yang Saya Pahami
 
@@ -96,7 +104,7 @@ Saya masih perlu memperbanyak latihan agar lebih terbiasa menggunakan berbagai o
 
 ### 📌 Learning Log
 
-**Tanggal:** 15 September 2026
+**Tanggal:** 16 September 2026
 
 **Fokus:** Array & Array Operations
 

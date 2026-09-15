@@ -89,3 +89,25 @@ console.log("Panjang data: ", mahasiswa2.length);
 mahasiswa2.shift();
 console.log("Daftar Mahasiswa (setelah menggunakan shift()): ", mahasiswa2);
 console.log("Panjang data: ", mahasiswa2.length);
+
+
+// Menggunakan splice()
+let makanan = ["Pizza", "Spageti", "Mie", "Bakso"];
+console.log(makanan);
+
+console.log("Aku mau menghapus 2 data yaitu mie dan bakso");
+makanan.splice(2, 2);
+console.log(makanan);
+
+// mau menambahkan data baru
+let buah = ["Apel", "Mangga", "Anggur"];
+buah.splice(1, 0, "Srikaya", "Durian");
+console.log(buah);
+
+// mau mengubah dan menambahkan data baru
+
+let pakaian = ["baju koko", "celana pendek", "Baju dalam"];
+console.log("Pakaian sebelum splice: ", pakaian);
+
+pakaian.splice(1, 2, "Sepatu", "Celana dalam");
+console.log("Pakaian setelah splice: ", pakaian);
