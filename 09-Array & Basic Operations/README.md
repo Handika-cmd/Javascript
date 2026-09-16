@@ -115,6 +115,8 @@ Apel   Mangga    Jeruk    Pisang   Anggur
 Mulai dari index 2, ambil semuanya sampai akhir.
 ```
 
+jika hanya `slice()` aja, maka: semua isi array
+
 ## 🧠 Yang Saya Pahami
 
 * Array dapat menyimpan banyak data dalam satu variabel.
