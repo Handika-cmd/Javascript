@@ -57,12 +57,41 @@ Digunakan untuk menghapus data terakhir dari Array.
 mahasiswa.pop();
 ```
 ## `splice()`
-```digunakan ketika kita ingin menambah, menghapus, atau mengganti data di posisi tertentu.
+digunakan ketika kita ingin menambah, menghapus, atau mengganti data di posisi tertentu.
+```javascript
 contoh:
 let buah = ["Apel", "Jeruk", "Mangga", "Pisang"];
 buah.splice(1, 1); ---> menghapus mulai dari index 1 dan jumlah dihapus 1 data.
 buah.splice(2, 0, "Durian", "Srikaya"); ---> menambahkan 2 data di mulai dari index 2.
 buah.splice(1, 2, "Anggur", "Manggis"); ---> mengubah 2 data di mulai dari index 1.
+```
+
+## `slice()`
+* slice() → menyalin sebagian data dari array tanpa mengubah array asli.
+```javascript
+let makanan = ["Pizza", "Spageti", "Mie", "Bakso", "Sate"];
+
+let hasil = makanan.slice(1, 4);
+```
+artinya:
+```javascript
+slice(1, 4)
+      ↑  ↑
+    mulai sampai sebelum index 4
+```
+Index-nya:
+```javascript
+0        1         2       3        4
+Pizza  Spageti    Mie    Bakso    Sate
+
+Maka yang diambil:
+Spageti → Mie → Bakso
+```
+`hasil` menjadi:
+```javascript
+["Spageti", "Mie", "Bakso"]
+
+`perlu diingat`: Index awal masuk, index akhir tidak masuk. bukan 4.
 ```
 
 ## 🧠 Yang Saya Pahami
