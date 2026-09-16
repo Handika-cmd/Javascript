@@ -57,12 +57,13 @@ Digunakan untuk menghapus data terakhir dari Array.
 mahasiswa.pop();
 ```
 ## `splice()`
-digunakan ketika kita ingin menambah, menghapus, atau mengganti data di posisi tertentu.
+```digunakan ketika kita ingin menambah, menghapus, atau mengganti data di posisi tertentu.
 contoh:
 let buah = ["Apel", "Jeruk", "Mangga", "Pisang"];
 buah.splice(1, 1); ---> menghapus mulai dari index 1 dan jumlah dihapus 1 data.
 buah.splice(2, 0, "Durian", "Srikaya"); ---> menambahkan 2 data di mulai dari index 2.
 buah.splice(1, 2, "Anggur", "Manggis"); ---> mengubah 2 data di mulai dari index 1.
+```
 
 ## 🧠 Yang Saya Pahami
 
