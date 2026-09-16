@@ -111,3 +111,37 @@ console.log("Pakaian sebelum splice: ", pakaian);
 
 pakaian.splice(1, 2, "Sepatu", "Celana dalam");
 console.log("Pakaian setelah splice: ", pakaian);
+
+// =========================================================================================
+// Latihan Slice 1
+// =========================================================================================
+let buah1 = [
+    "Pisang",
+    "Apel",
+    "Jeruk",
+    "Jambu",
+    "Srikaya"
+];
+
+let hasil = buah.slice(1, 4);
+console.log("Hasil asli: ", buah);
+console.log("Hasil dari slice: ", hasil);
+
+// Latihan slice 2
+
+let mahasiswa = [
+    "Fajar",
+    "Handika",
+    "Ilyas",
+    "Faiz",
+    "Filip",
+    "Ibas",
+    "Daigo"
+];
+
+console.log("Daftar mahasiswa: ", mahasiswa, " Dengan jumlah ", mahasiswa.length, " Orang");
+
+let kelompok1 = mahasiswa.slice(0, 3);
+console.log("Kelompok 1: ", kelompok1);
+let kelompok2 = mahasiswa.slice(3, 7);
+console.log("Kelompok 2: ", kelompok2);

@@ -93,6 +93,27 @@ Spageti → Mie → Bakso
 
 `perlu diingat`: Index awal masuk, index akhir tidak masuk. bukan 4.
 ```
+nah jika hanya menggunakan satu angka saja slice(2), maka:
+```javascript
+mulai dari index 2 sampai akhir.
+```
+contoh hanya 1 angka saja:
+```javascript
+let buah = ["Apel", "Mangga", "Jeruk", "Pisang", "Anggur"];
+
+let hasil = buah.slice(2);
+// maka hasilnya:
+["Jeruk", "Pisang", "Anggur"]
+```
+Index array:
+```javascript
+0        1         2        3        4
+Apel   Mangga    Jeruk    Pisang   Anggur
+                    ↑
+                 mulai dari 2
+
+Mulai dari index 2, ambil semuanya sampai akhir.
+```
 
 ## 🧠 Yang Saya Pahami
 
@@ -102,6 +123,8 @@ Spageti → Mie → Bakso
 * Nilai Array dapat diubah.
 * `push()` menambahkan data ke akhir Array.
 * `pop()` menghapus data terakhir Array.
+* `splice()` menambah atau menghapus atau mengubah data array.
+* `slice()` Menyalin atau mengaambil data Array.
 
 ## 🛠️ Latihan
 
@@ -110,7 +133,9 @@ Spageti → Mie → Bakso
 * [x] Mengubah data Array
 * [x] Menggunakan `push()`
 * [x] Menggunakan `pop()`
-* [ ] Mencoba operasi Array lainnya
+* [x] Menggunakan `splice()`
+* [x] Menggunakan `slice()`
+* [x] Mencoba operasi Array lainnya
 
 ## 📂 Struktur File
 
