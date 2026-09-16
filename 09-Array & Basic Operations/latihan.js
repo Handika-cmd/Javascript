@@ -123,8 +123,8 @@ let buah1 = [
     "Srikaya"
 ];
 
-let hasil = buah.slice(1, 4);
-console.log("Hasil asli: ", buah);
+let hasil = buah1.slice(1, 4);
+console.log("Hasil asli: ", buah1);
 console.log("Hasil dari slice: ", hasil);
 
 // Latihan slice 2
@@ -138,10 +138,9 @@ let mahasiswa = [
     "Ibas",
     "Daigo"
 ];
-
-console.log("Daftar mahasiswa: ", mahasiswa, " Dengan jumlah ", mahasiswa.length, " Orang");
-
+let salinan = mahasiswa.slice();
 let kelompok1 = mahasiswa.slice(0, 3);
 console.log("Kelompok 1: ", kelompok1);
 let kelompok2 = mahasiswa.slice(3, 7);
 console.log("Kelompok 2: ", kelompok2);
+console.log("Daftar Mahasiswa: ", salinan, " dengan jumlah ", mahasiswa.length, " orang");

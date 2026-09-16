@@ -153,7 +153,9 @@ Property `alamat` sekarang sudah dihapus dari Object.
 | File         | Keterangan               |
 | ------------ | ------------------------ |
 | `index.html` | Struktur halaman latihan |
+| ------------ | ------------------------ |
 | `script.js`  | Praktik JavaScript       |
+| ------------ | ------------------------ |
 | `README.md`  | Dokumentasi materi       |
 
 ## 🚧 Tantangan
@@ -162,11 +164,9 @@ Saya masih perlu memperbanyak latihan agar lebih terbiasa membedakan Object, Pro
 
 ## ✅ Progress
 
-**Status:** 🟢 Selesai
-
-**Materi:** Object & Property
-
-**Day:** 10
+|   status  |        Materi        |  Day |
+|:---------:|:--------------------:|:----:|
+| Selesai   | Objects & Properties | Rabu |
 
 ---
 
