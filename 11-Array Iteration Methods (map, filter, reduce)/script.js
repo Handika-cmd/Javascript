@@ -42,3 +42,43 @@ let hargaRendah = daftarHarga.filter(function(harga){
 
 console.log(`Daftar Harga: ${daftarHarga}`);
 console.log(`Harga Rendah: ${hargaRendah}`);
+
+// Latihan 4 objek
+let daftarBarang =[
+    {nama: "Baju", harga: 35000},
+    {nama: "Celana", harga: 45000},
+    {nama: "Tas", harga: 50000},
+    {nama: "Sepatu", harga: 65000},
+    {nama: "Jaket", harga: 70000}
+];
+
+let hargaRendah = daftarBarang.filter(function(item){
+    return item.harga < 50000;
+});
+
+console.log("Item golongan harga rendah", hargaRendah);
+
+// Latihan 5 — Filter berdasarkan property lain
+let mahasiswa =[
+    {nama: "Handika Saputra", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3},
+    {nama: "Ririn Dwi Aryanti", jurusan: "Teknik Informatika", fakultas: "Teknik", semester: 3},
+    {nama: "Rahmat Ramadan", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3},
+    {nama: "Avanza Khalil", jurusan: "Teknik Elektro", fakultas: "Teknik", semester: 1},
+    {nama: "Khairu Wildan", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3}
+];
+
+let mahasiswaTarbiyah = mahasiswa.filter(function(item){
+    return item.fakultas === "Tarbiyah";
+});
+
+let mahasiswaTeknik = mahasiswa.filter(function(item){
+    return item.fakultas === "Teknik";
+});
+
+let mahasiswaInformatika = mahasiswa.filter(function(item){
+    return item.jurusan === "Teknik Informatika"
+});
+
+console.log("Daftar Mahasiswa Tarbiyah: ", mahasiswaTarbiyah);
+console.log("Daftar Mahasiswa Teknik: ", mahasiswaTeknik);
+console.log("Nama Mahasiswa Teknik Informatika: ", mahasiswaInformatika);
