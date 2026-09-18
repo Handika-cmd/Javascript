@@ -95,4 +95,52 @@ console.log("Mahasiswa PAI: ", mahasiswaPAI);
 console.log("Mahasiswa Manajemen: ", mahasiswaManajemen);
 console.log("Mahasiswa Ekonomi: ", mahasiswaEkonomi);
 console.log("Mahasiswa Informatika: ", mahasiswaInformatika);
-console.log("Mahasiswa ")
+
+// ==============================================================================================================================
+// Latihan menggunakan map()
+// ==============================================================================================================================
+
+let umur = [15, 20, 25, 30, 35, 40, 50];
+
+let perubahanUmur = umur.map(function(item){
+    return item + 1;
+});
+
+console.log("Umur bertambah: ", perubahanUmur);
+// ==============================================================================================================================
+// map() dengan object.
+let daftarBarang =[
+    {nama: "Baju", harga: 28000},
+    {nama: "Celana", harga: 38000},
+    {nama: "Sepatu", harga: 98000}
+];
+
+let hargaBaru = daftarBarang.map(function(item){
+    return {
+        nama: item.nama,
+        harga: item.harga + 2000
+    };
+});
+
+console.log("Harga Terbaru: ", hargaBaru);
+
+// // Gabungan map() dan filter()
+let barang = [
+    { nama: "Baju", harga: 28000 },
+    { nama: "Celana", harga: 38000 },
+    { nama: "Sepatu", harga: 98000 },
+    { nama: "Jaket", harga: 75000 }
+];
+
+let hasil = barang
+    .filter(function(item){
+        return item.harga >= 75000;
+    })
+    .map(function(item){
+        return{
+            nama: item.nama,
+            harga: item.harga + 10000
+        }
+    });
+
+    console.log("Harga terbaru: ", hasil);
