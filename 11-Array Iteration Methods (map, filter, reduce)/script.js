@@ -143,4 +143,13 @@ let hasil = barang
         }
     });
 
-    console.log("Harga terbaru: ", hasil);
+console.log("Harga terbaru: ", hasil);
+
+
+let hargaJam = [25000, 35000, 40000];
+
+let hasilHarga = hargaJam.reduce(function(total, item){
+    return total + item;
+}, 0);
+
+console.log("Harga Naik: ",hasilHarga);
