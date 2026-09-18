@@ -1,49 +1,4 @@
-// Contoh dasar menggunakan filter()
-let harga = [2000, 5000, 10000, 15000, 20000];
-
-let hargaMahal = harga.filter(function(harga){
-    return harga >= 10000;
-});
-
-console.log(hargaMahal);
-
-// Latihan 1 filter data harga tinggi
-let hargaBarang =[25000, 30000, 45000, 55000, 65000, 70000];
-
-let hargaTinggi = hargaBarang.filter(function(hargaBarang){
-    return hargaBarang >= 55000;
-})
-console.log("Harga Tinggi: ", hargaTinggi);
-
-// Latihan 2 — Filter data harga rendah
-let hargabarang = [25000, 30000, 45000, 55000, 65000, 70000];
-
-let hargaRendah = hargabarang.filter(function(harga){
-    return harga < 45000;
-});
-
-console.log(`Harga rendah: Rp ${hargaRendah}`);
-
-// Latihan 3 daftar harga
-
-let daftarHarga = [
-    15000,
-    25000,
-    50000,
-    65000,
-    70000,
-    75000,
-    80000
-];
-
-let hargaRendah = daftarHarga.filter(function(harga){
-    return harga < 65000;
-});
-
-console.log(`Daftar Harga: ${daftarHarga}`);
-console.log(`Harga Rendah: ${hargaRendah}`);
-
-// Latihan 4 objek
+// Latihan  objek
 let daftarBarang =[
     {nama: "Baju", harga: 35000},
     {nama: "Celana", harga: 45000},
@@ -55,11 +10,15 @@ let daftarBarang =[
 let hargaRendah = daftarBarang.filter(function(item){
     return item.harga < 50000;
 });
+let hargaBaju = daftarBarang.filter(function(item){
+    return item.nama === "Baju";
+});
 
 console.log("Item golongan harga rendah", hargaRendah);
+console.log("Harga Baju: ", hargaBaju);
 
-// Latihan 5 — Filter berdasarkan property lain
-let mahasiswa =[
+// Latihan — Filter berdasarkan property lain
+let mahasiswa1 =[
     {nama: "Handika Saputra", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3},
     {nama: "Ririn Dwi Aryanti", jurusan: "Teknik Informatika", fakultas: "Teknik", semester: 3},
     {nama: "Rahmat Ramadan", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3},
@@ -67,15 +26,15 @@ let mahasiswa =[
     {nama: "Khairu Wildan", jurusan: "PAI", fakultas: "Tarbiyah", semester: 3}
 ];
 
-let mahasiswaTarbiyah = mahasiswa.filter(function(item){
+let mahasiswaTarbiyah = mahasiswa1.filter(function(item){
     return item.fakultas === "Tarbiyah";
 });
 
-let mahasiswaTeknik = mahasiswa.filter(function(item){
+let mahasiswaTeknik = mahasiswa1.filter(function(item){
     return item.fakultas === "Teknik";
 });
 
-let mahasiswaInformatika = mahasiswa.filter(function(item){
+let mahasiswaInformatika1 = mahasiswa1.filter(function(item){
     return item.jurusan === "Teknik Informatika"
 });
 
@@ -88,7 +47,7 @@ console.log("Nama Mahasiswa Teknik Informatika: ", mahasiswaInformatika);
 // =================================================================================================================
 // Latihan mengambil data mahasiswa menggunakan filter
 // =================================================================================================================
-let mahasiswa = [
+let mahasiswa2 = [
     { nama: "Dika", jurusan: "PAI", semester: 3 },
     { nama: "Ririn", jurusan: "PAI", semester: 2 },
     { nama: "Rahmat", jurusan: "PAI", semester: 3 },
@@ -111,23 +70,23 @@ let mahasiswa = [
     { nama: "Intan", jurusan: "Teknik Sipil", semester: 4 }
 ];
 
-let mahasiswaHukum = mahasiswa.filter(function(item){
+let mahasiswaHukum = mahasiswa2.filter(function(item){
     return item.jurusan === "Hukum";
 });
 
-let mahasiswaPAI = mahasiswa.filter(function(item){
+let mahasiswaPAI = mahasiswa2.filter(function(item){
     return item.jurusan === "PAI";
 })
 
-let mahasiswaManajemen = mahasiswa.filter(function(item){
+let mahasiswaManajemen = mahasiswa2.filter(function(item){
     return item.jurusan === "Manajemen";
 });
 
-let mahasiswaEkonomi = mahasiswa.filter(function(item){
+let mahasiswaEkonomi = mahasiswa2.filter(function(item){
     return item.jurusan === "Ekonomi";
 });
 
-let mahasiswaInformatika = mahasiswa.filter(function(item){
+let mahasiswaInformatika = mahasiswa2.filter(function(item){
     return item.jurusan === "Informatika";
 });
 
