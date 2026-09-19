@@ -359,8 +359,6 @@ console.log(container.lastElementChild);
 
 ## Yang Saya Pahami
 
-Tuliskan pemahaman dengan bahasa sendiri setelah praktik.
-
 Contoh:
 
 > DOM membuat struktur HTML dapat diakses oleh JavaScript sebagai objek.
@@ -371,22 +369,7 @@ Contoh:
 
 ---
 
-## Hal yang Masih Membingungkan
-
-Tuliskan bagian yang belum benar-benar dipahami.
-
-Contoh:
-
-* Masih perlu memahami perbedaan `querySelector()` dan `querySelectorAll()`.
-* Masih perlu memahami hubungan parent, child, dan sibling.
-* Masih perlu membiasakan diri membaca struktur DOM.
-* Masih perlu memahami kapan menggunakan masing-masing method.
-
----
-
 ## Visualisasi
-
-Jika diperlukan, tambahkan diagram DOM di sini.
 
 ```html
 <p align="center">
