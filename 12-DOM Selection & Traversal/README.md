@@ -19,6 +19,31 @@ Pada materi ini saya mulai mempelajari bagaimana JavaScript dapat menemukan dan 
 
 Materi ini menjadi dasar sebelum mempelajari manipulasi DOM seperti mengubah teks, mengubah style, membuat elemen, menghapus elemen, dan menangani event.
 
+```text
+alur materi DOM Selection & Traversal
+
+A. DOM dasar
+   └── document
+
+B. DOM Selection
+   ├── getElementById()
+   ├── getElementsByClassName()
+   ├── getElementsByTagName()
+   ├── querySelector()
+   └── querySelectorAll()
+
+C. DOM Traversal
+   ├── parentElement
+   ├── children
+   ├── firstElementChild
+   ├── lastElementChild
+   ├── nextElementSibling
+   └── previousElementSibling
+
+D. Latihan
+   └── mencari dan berpindah antar-elemen HTML
+```
+
 ---
 
 ## Tujuan Belajar
@@ -84,7 +109,51 @@ HTML:
     <h1>Belajar JavaScript</h1>
 </div>
 ```
+jika ingin mrnghasilkan elemen:
+```html
+<h1 id="judul">Toko Dika</h1>
+```
+```javascript
+console.log(judul.textContent);
+```
+maka hasilnya:
+```text
+Toko Dika
+```
+**Ada satu hal penting yang perlu perhatikan:**
 
+Misalnya:
+```html
+<h1 id="judul">Toko Dika</h1>
+```
+maka javascriptnya:
+```javascript
+let judul = document.getElementById("judul");
+```
+**Hubungannya:**
+```text
+HTML                         JavaScript
+
+id="judul"  ───────────────→ "judul"
+                                ↓
+                     getElementById()
+                                ↓
+                         elemen <h1>
+```
+Jadi `judul` pada JavaScript harus cocok dengan:
+```html
+id="judul"
+```
+
+Kalau HTML-nya:
+```html
+<h1 id="nama-toko">Toko Dika</h1>
+```
+maka:
+```javascript
+document.getElementById("judul");
+```
+***tidak akan menemukan elemen tersebut.***
 
 ---
 
