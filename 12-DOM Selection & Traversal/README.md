@@ -157,6 +157,36 @@ document.getElementById("judul");
 
 ---
 
+**Sekarang kita mencari berdasarkan class.** menggunakan `getElementsByClassName()`:
+```html
+<p class="produk">Baju</p>
+<p class="produk">Celana</p>
+<p class="produk">Sepatu</p>
+```
+javascript:
+```javascript
+let produk = document.getElementsByClassName("produk");
+
+console.log(produk);
+```
+Pola sederhananya:
+```text
+getElementById()
+        ↓
+       ID
+        ↓
+   satu elemen
+
+
+getElementsByClassName()
+        ↓
+      CLASS
+        ↓
+ sekumpulan elemen
+```
+---
+
+
 ### `querySelector()`
 
 Digunakan untuk memilih elemen pertama yang sesuai dengan CSS selector.

@@ -14,3 +14,7 @@ console.log(tombol);
 
 console.log(deskripsi.textContent);
 console.log(tombol.textContent);
+
+let produk = document.getElementsByClassName("produk");
+console.log(produk[0]);
+console.log(produk[2]);
