@@ -1,3 +1,8 @@
-let judul = document.getElementById("judul");
+let judul = document.querySelector("#judul h1");
 
-console.log(judul.textContent ="Handika Saputra");
+judul.innerHTML = "DI<span>KA</span>";
+
+judul.style.color = "blue";
+
+judul.style.fontSize = "50px";
+
