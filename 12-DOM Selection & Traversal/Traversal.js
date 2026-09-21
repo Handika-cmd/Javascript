@@ -1,5 +1,16 @@
+// Pakai parentElement
 let produk = document.querySelector(".card p");
 console.log(produk);
 
 const parent = produk.parentElement;
+console.log(parent);
+
+
+// Pakai children
+const card = document.querySelector(".card");
+console.log(card.children[0]);
+console.log(card.children[1]);
+console.log(card.children[2]);
+
+const parent1 = card.parentElement;
 console.log(parent);
