@@ -456,15 +456,32 @@ console.log(container.lastElementChild);
 
 ---
 
-## Yang Saya Pahami
+## Cheat sheet
 
-Contoh:
-
-> DOM membuat struktur HTML dapat diakses oleh JavaScript sebagai objek.
-
-> DOM Selection digunakan untuk menemukan elemen HTML yang ingin digunakan.
-
-> DOM Traversal digunakan untuk berpindah dari suatu elemen ke elemen lain berdasarkan hubungan dalam struktur DOM.
+**naik ke parent**
+```javascript
+element.parentElement
+```
+**melihat semua child**
+```javascript
+element.children
+```
+**child pertama**
+```javascript
+element.firstElementChild
+```
+**child terakhir**
+```javascript
+element.lastElementChild
+```
+**sibling berikutnya**
+```javascript
+element.nextElementSibling
+```
+**sibling sebelumnya**
+```javascript
+element.previousElementSibling
+```
 
 ---
 
@@ -491,7 +508,7 @@ Contoh:
 
 ## Progress
 
-**Day:** 12
+**No:** 12
 
 **Materi:** DOM Selection & Traversal
 
@@ -510,31 +527,10 @@ Traversal
   ↓
 Manipulation
 ```
-
 ---
 
-## Learning Log
+## Sumber Belajar
 
-**Tanggal:** 19 September 2026
+***https://www.freecodecamp.org/***
 
-**Fokus:** DOM Selection & Traversal
-
-**Materi:** DOM, Selection, dan Traversal
-
-**Hasil belajar:**
-
-[Tulis apa yang berhasil dipahami setelah praktik.]
-
-**Kesulitan:**
-
-[Tulis bagian yang masih membingungkan.]
-
-**Catatan penting:**
-
-[Tulis insight atau kesalahan yang ditemukan selama latihan.]
-
----
-
-## Materi Berikutnya
-
-Day 13 — [Nama Materi]
+***https://www.w3schools.com/***

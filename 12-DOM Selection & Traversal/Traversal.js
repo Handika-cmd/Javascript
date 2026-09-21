@@ -11,6 +11,8 @@ const card = document.querySelector(".card");
 console.log(card.children[0]);
 console.log(card.children[1]);
 console.log(card.children[2]);
-
+console.log(card.children[0].textContent);
+console.log(card.children[1].textContent);
+console.log(card.children[2].textContent);
 const parent1 = card.parentElement;
 console.log(parent);
