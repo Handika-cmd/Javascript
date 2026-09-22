@@ -18,6 +18,10 @@ judul.style.fontSize = "50px";
  deskripsi.style.color = "grey";
 
 //  Latihan 1 — Profil
+let judul = document.querySelector("#judul h1");
+let status = document.querySelector("#status p");
+let skill = document.querySelector("#skill p")
+
 
 judul.textContent = "Handika Saputra";
 judul.style.color = "green";
