@@ -299,21 +299,6 @@ Tampilan HTML berubah
 
 ---
 
-## Yang Saya Pahami
-
-Tuliskan pemahaman dengan bahasa sendiri setelah praktik.
-
-Contoh:
-
-> `textContent` digunakan ketika saya ingin mengubah isi berupa teks.
-
-> `innerHTML` digunakan ketika saya ingin memasukkan atau mengubah struktur HTML di dalam suatu elemen.
-
-> `style.color` digunakan untuk mengubah warna teks elemen melalui JavaScript.
-
-> DOM Manipulation memungkinkan JavaScript mengubah halaman setelah elemen HTML berhasil dipilih.
-
----
 
 ## Visualisasi
 
@@ -352,6 +337,35 @@ Tampilan berubah
 | `script.js`  | Praktik DOM Manipulation         |
 | `README.md`  | Dokumentasi dan ringkasan materi |
 | `images/`    | Gambar atau diagram pendukung    |
+
+---
+
+## Cheat Sheet — DOM Manipulation & Style Modification
+| Syntax                   | Fungsi                                              | Contoh                                           |
+| ------------------------ | --------------------------------------------------- | ------------------------------------------------ |
+| `querySelector()`        | Mengambil elemen pertama yang cocok dengan selector | `document.querySelector("#judul h1")`            |
+| `textContent`            | Membaca atau mengubah teks                          | `judul.textContent = "Handika"`                  |
+| `innerHTML`              | Membaca atau mengubah isi HTML                      | `judul.innerHTML = "Halo <strong>Dika</strong>"` |
+| `.style.color`           | Mengubah warna teks                                 | `judul.style.color = "blue"`                     |
+| `.style.fontSize`        | Mengubah ukuran teks                                | `judul.style.fontSize = "40px"`                  |
+| `.style.backgroundColor` | Mengubah warna background                           | `judul.style.backgroundColor = "yellow"`         |
+| `.style.fontWeight`      | Mengubah ketebalan teks                             | `judul.style.fontWeight = "bold"`                |
+| `.style.textAlign`       | Mengubah posisi teks                                | `judul.style.textAlign = "center"`               |
+
+## Perbedaan Penting
+| Method / Property | Kegunaan              | Contoh                         |
+| ----------------- | --------------------- | ------------------------------ |
+| `textContent`     | Teks biasa            | `"Halo Dika"`                  |
+| `innerHTML`       | Teks + HTML           | `"Halo <strong>Dika</strong>"` |
+| `style`           | Mengubah CSS langsung | `judul.style.color = "red"`    |
+
+## Pola yang Perlu Diingat
+| Tahap         | Kode                                  | Artinya                   |
+| ------------- | ------------------------------------- | ------------------------- |
+| 1. Cari       | `document.querySelector("#judul h1")` | Cari elemen               |
+| 2. Simpan     | `let judul = ...`                     | Simpan elemen ke variabel |
+| 3. Manipulasi | `judul.textContent = "..."`           | Ubah isi elemen           |
+| 4. Styling    | `judul.style.color = "blue"`          | Ubah tampilan elemen      |
 
 ---
 

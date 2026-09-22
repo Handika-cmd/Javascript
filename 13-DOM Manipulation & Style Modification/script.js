@@ -28,6 +28,7 @@ judul.style.color = "green";
 judul.style.fontSize = "50px";
 
 status.textContent ="Mahasiswa Aktif PAI";
+status.style.color ="grey";
 
 skill.innerHTML = "Belajar <strong>Javascript, CSS, HTML</strong>"
-skill.style.color ="grey";
+skill.style.color ="green";
