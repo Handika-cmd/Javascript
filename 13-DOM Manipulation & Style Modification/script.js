@@ -18,3 +18,12 @@ judul.style.fontSize = "50px";
  deskripsi.style.color = "grey";
 
 //  Latihan 1 — Profil
+
+judul.textContent = "Handika Saputra";
+judul.style.color = "green";
+judul.style.fontSize = "50px";
+
+status.textContent ="Mahasiswa Aktif PAI";
+
+skill.innerHTML = "Belajar <strong>Javascript, CSS, HTML</strong>"
+skill.style.color ="grey";
