@@ -26,13 +26,45 @@
 
 // Latihan 3 input nama dan umur
 
-const inputNama = document.getElementById("inputNama");
-const inputUmur = document.getElementById("inputUmur");
+// const inputNama = document.getElementById("inputNama");
+// const inputUmur = document.getElementById("inputUmur");
+// const hasil = document.getElementById("hasil");
+
+// function tampilkanHasil(){
+//     hasil.textContent = "Halo nama saya " + inputNama.value + ", sekarang umur saya " + inputUmur.value + " tahun";
+// };
+
+// inputNama.addEventListener("input", tampilkanHasil);
+// inputUmur.addEventListener("input", tampilkanHasil);
+
+// const form = document.getElementById("form");
+// const inputNama = document.getElementById("nama");
+// const inputUmur = document.getElementById("umur");
+// const hasil = document.getElementById("hasil");
+
+// form.addEventListener("submit", function(event){
+
+//     event.preventDefault();
+
+//     hasil.textContent = "Halo, Nama saya " + inputNama.value + ", Umur " + inputUmur.value + " tahun."
+// });
+
+// ========================================================================
+// // FORM PENDAFTARAN MAHASISWA
+// ========================================================================
+
+const form = document.getElementById("form");
+const nama = document.getElementById("nama");
+const email = document.getElementById("email");
+const jurusan = document.getElementById("jurusan");
 const hasil = document.getElementById("hasil");
 
-function tampilkanHasil(){
-    hasil.textContent = "Halo nama saya " + inputNama.value + " sekarang saya umur saya " + inputUmur.value + " tahun";
-};
+form.addEventListener("submit", function(event){
 
-inputNama.addEventListener("input", tampilkanHasil);
-inputUmur.addEventListener("input", tampilkanHasil);
+    event.preventDefault();
+
+    hasil.textContent = "Nama: " + nama.value;
+    hasil.textContent = "Email Aktif: " + email.value;
+    hasil.textContent = "Jurusan: " + jurusan.value;
+
+});
