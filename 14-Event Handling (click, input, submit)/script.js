@@ -53,6 +53,26 @@
 // // FORM PENDAFTARAN MAHASISWA
 // ========================================================================
 
+// Gabungkan semuanya menjadi satu assignment:
+// const form = document.getElementById("form");
+// const nama = document.getElementById("nama");
+// const email = document.getElementById("email");
+// const jurusan = document.getElementById("jurusan");
+// const hasil = document.getElementById("hasil");
+
+// form.addEventListener("submit", function(event){
+
+//     event.preventDefault();
+
+//     hasil.textContent = "Nama: " + nama.value +
+//     " | Email Aktif: " + email.value +
+//     " | Jurusan: " + jurusan.value;
+
+// });
+// ============================================================================
+// cara yang lebih enak untuk tampilan beberapa baris.
+// Menggunakan InnerHTML
+
 const form = document.getElementById("form");
 const nama = document.getElementById("nama");
 const email = document.getElementById("email");
@@ -63,8 +83,8 @@ form.addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    hasil.textContent = "Nama: " + nama.value;
-    hasil.textContent = "Email Aktif: " + email.value;
-    hasil.textContent = "Jurusan: " + jurusan.value;
-
-});
+    hasil.innerHTML =
+    "Nama: " + nama.value + "<br>" + 
+    "Email: " + email.value + "<br>" +
+    "jurusan: " + jurusan.value;
+})
