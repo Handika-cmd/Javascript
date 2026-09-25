@@ -8,11 +8,12 @@
 // console.log(nama);
 
 
+// ============================================================================================================================
 // latihan kecil yang menggabungkan Day 14 + Day 15.
-
 
 const nama = document.getElementById("nama");
 const hasil = document.getElementById("hasil");
+const button = document.getElementById("simpan");
 
 button.addEventListener("click", function(event){
 
@@ -22,11 +23,6 @@ button.addEventListener("click", function(event){
     localStorage.setItem("nama", nama.value);
 });
 
-button.addEventListener("click", function(reset){
-
-    reset.preventDefault();
-    localStorage.removeItem("nama");
-})
-
 const namaTersimpan = localStorage.getItem("nama");
-console.log(namaTersimpan);
+
+hasil.textContent = "Nama: " + namaTersimpan;
