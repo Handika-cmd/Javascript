@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    transition: 0.3s;
+}
+
+.card {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .card {
+    border-color: white;
+}
