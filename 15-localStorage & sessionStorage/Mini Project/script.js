@@ -17,8 +17,12 @@ form.addEventListener("submit", function(event){
     "Jurusan: " + jurusan.value + "<br>" + "<br>" +
     "Semester: " + semester.value + "<br>" +"<br>"
 
-    localStorage.setItem("Nama", nama.value);
-    localStorage.setItem("Email", email.value);
-    localStorage.setItem("Jurusan", jurusan.value);
-    localStorage.setItem("Semester", semester.value);
+    localStorage.setItem("nama", nama.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("jurusan", jurusan.value);
+    localStorage.setItem("semester", semester.value);
 });
+
+const namaTersimpan = localStorage.getItem("nama");
+
+hasil.textContent = "Nama: " + namaTersimpan;
