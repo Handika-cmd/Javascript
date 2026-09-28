@@ -24,5 +24,23 @@ form.addEventListener("submit", function(event){
 });
 
 const namaTersimpan = localStorage.getItem("nama");
+const emailTersimpan = localStorage.getItem("email");
+const jurusanTersimpan = localStorage.getItem("jurusan");
+const semesterTersimpan = localStorage.getItem("semester");
 
-hasil.textContent = "Nama: " + namaTersimpan;
+hasil.innerHTML = 
+    "Nama: " + namaTersimpan + "<br>" +
+    "Email: " + emailTersimpan + "<br>" +
+    "Jurusan: " + jurusanTersimpan + "<br>" +
+    "Semester: " + semesterTersimpan + "<br>";
+
+
+hapus.addEventListener("click", function(event){
+
+    event.preventDefault()
+
+    localStorage.removeItem("nama");
+    localStorage.removeItem("email");
+    localStorage.removeItem("jurusan");
+    localStorage.removeItem("semester");
+});
