@@ -40,10 +40,7 @@ const jurusanTersimpan = localStorage.getItem("jurusan");
 const semesterTersimpan = localStorage.getItem("semester");
 
 if (namaTersimpan){
-  console.log("Data Tersedia")
-}
-
-hasil.innerHTML =
+  hasil.innerHTML =
   "Nama: " +
   namaTersimpan +
   "<br>" +
@@ -54,8 +51,10 @@ hasil.innerHTML =
   jurusanTersimpan +
   "<br>" +
   "Semester: " +
-  semesterTersimpan +
-  "<br>";
+  semesterTersimpan;
+}else{
+  hasil.textContent = "Belum ada data tersimpan";
+}
 
 hapus.addEventListener("click", function (event) {
   event.preventDefault();
