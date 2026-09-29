@@ -1,5 +1,3 @@
-# JavaScript Day 16 — JSON
-
 <p align="center">
   <img src="https://www.ydop.com/wp-content/uploads/2015/06/json-logo.png" width="90" alt="JavaScript Logo">
 </p>
