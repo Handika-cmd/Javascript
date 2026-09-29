@@ -39,6 +39,10 @@ const emailTersimpan = localStorage.getItem("email");
 const jurusanTersimpan = localStorage.getItem("jurusan");
 const semesterTersimpan = localStorage.getItem("semester");
 
+if (namaTersimpan){
+  console.log("Data Tersedia")
+}
+
 hasil.innerHTML =
   "Nama: " +
   namaTersimpan +
