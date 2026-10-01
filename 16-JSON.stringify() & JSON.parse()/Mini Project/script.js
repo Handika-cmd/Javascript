@@ -7,6 +7,23 @@ const simpan = document.getElementById("simpan");
 const hapus = document.getElementById("hapus");
 const hasil = document.getElementById("hasil");
 
+function tampilkanPengguna(pengguna) {
+  if (!pengguna) {
+    hasil.textContent = "Belum ada data tersimpan";
+    return;
+  }
+
+  hasil.replaceChildren(
+    "Nama: " + pengguna.nama,
+    document.createElement("br"),
+    "Email: " + pengguna.email,
+    document.createElement("br"),
+    "Jurusan: " + pengguna.jurusan,
+    document.createElement("br"),
+    "Semester: " + pengguna.semester
+  );
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -18,30 +35,15 @@ form.addEventListener("submit", function (event) {
   };
   const dataJSON = JSON.stringify(pengguna);
   localStorage.setItem("pengguna", dataJSON);
+  tampilkanPengguna(pengguna);
   console.log(dataJSON);
 });
 
 const dataTersimpan = localStorage.getItem("pengguna");
-const penggunaTersimpan =JSON.parse(dataTersimpan);
+const penggunaTersimpan = JSON.parse(dataTersimpan);
 
 console.log(penggunaTersimpan);
-
-if (penggunaTersimpan){
-  hasil.innerHTML =
-  "Nama: " +
-  penggunaTersimpan.nama +
-  "<br>" +
-  "Email: " +
-  penggunaTersimpan.email +
-  "<br>" +
-  "Jurusan: " +
-  penggunaTersimpan.jurusan +
-  "<br>" +
-  "Semester: " +
-  penggunaTersimpan.semester;
-}else{
-  hasil.textContent = "Belum ada data tersimpan";
-};
+tampilkanPengguna(penggunaTersimpan);
 
 hapus.addEventListener("click", function (event) {
   event.preventDefault();
