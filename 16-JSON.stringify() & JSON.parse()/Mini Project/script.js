@@ -6,6 +6,7 @@ const semester = document.getElementById("semester");
 const simpan = document.getElementById("simpan");
 const hapus = document.getElementById("hapus");
 const hasil = document.getElementById("hasil");
+const daftarSkill = document.getElementById("daftarSkill");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -14,7 +15,8 @@ form.addEventListener("submit", function (event) {
     nama: nama.value,
     email: email.value,
     jurusan: jurusan.value,
-    semester: semester.value
+    semester: semester.value,
+    skill: ["HTML", "Tailwindcss","CSS","TypeScript","Flutter","Python"]
   };
   const dataJSON = JSON.stringify(pengguna);
   localStorage.setItem("pengguna", dataJSON);
@@ -23,6 +25,11 @@ form.addEventListener("submit", function (event) {
 
 const dataTersimpan = localStorage.getItem("pengguna");
 const penggunaTersimpan =JSON.parse(dataTersimpan);
+const skill = penggunaTersimpan.skill;
+
+for (let i = 0; i < skill.length; i++){
+  daftarSkill.innerHTML += skill [i] + "<br>";
+}
 
 console.log(penggunaTersimpan);
 
@@ -38,7 +45,8 @@ if (penggunaTersimpan){
   penggunaTersimpan.jurusan +
   "<br>" +
   "Semester: " +
-  penggunaTersimpan.semester;
+  penggunaTersimpan.semester,
+  "Skill: " + penggunaTersimpan.skill;
 }else{
   hasil.textContent = "Belum ada data tersimpan";
 };
@@ -48,7 +56,7 @@ hapus.addEventListener("click", function (event) {
 
   localStorage.removeItem("pengguna");
 
-  hasil.textContent = "Belum ada data tersimpan.";
+  hasil.textContent = "Data Berhasil dihapus.";
 
   form.reset();
 });
