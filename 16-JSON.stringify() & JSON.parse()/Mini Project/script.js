@@ -32,7 +32,8 @@ for (let i = 0; i < skill.length; i++){
 }
 
 console.log(penggunaTersimpan);
-
+// menambahkan fungsi untuk menampilkan data yang tersimpan di localStorage
+function tampilkanData() { const dataTersimpan = localStorage.getItem("pengguna");
 if (penggunaTersimpan){
   hasil.innerHTML =
   "Nama: " +
@@ -50,6 +51,9 @@ if (penggunaTersimpan){
 }else{
   hasil.textContent = "Belum ada data tersimpan";
 };
+}
+
+tampilkanData();
 
 hapus.addEventListener("click", function (event) {
   event.preventDefault();
