@@ -31,6 +31,8 @@ for (let i = 0; i < skill.length; i++){
   daftarSkill.innerHTML += skill [i] + "<br>";
 }
 
+daftarSkill.innerHTML = "<ul>";
+
 console.log(penggunaTersimpan);
 // menambahkan fungsi untuk menampilkan data yang tersimpan di localStorage
 function tampilkanData() { const dataTersimpan = localStorage.getItem("pengguna");
