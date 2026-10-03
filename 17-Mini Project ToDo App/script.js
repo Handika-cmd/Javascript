@@ -1,24 +1,34 @@
+const tugas = [];
+
 // Langkah 6 — Hubungkan HTML dengan JavaScript.
+
 const inputTugas = document.getElementById("inputTugas");
 const tombol = document.getElementById("tambahTugas");
 const daftarTugas = document.getElementById("daftarTugas");
 
-// Langkah 7 — Membuat tombol Tambah merespons klik. test
-// tombol.addEventListener("click", function(){
-//     console.log("tombol diklik");
-// });
+// Langkah 7, 8, 9 — Klik tombol → ambil isi input → tampilkan ke halaman.
 
-// Langkah 8 — Ambil teks dari input (inget, Day 14 dulu kita sudah belajar: <input> → gunakan .value Sedangkan: <p>, <div>, <h1> → biasanya gunakan .textConten)
+tombol.addEventListener("click", function () {
+  const tugasBaru = {
+    id: tugas.length + 1,
+    teks: inputTugas.value,
+    selesai: false
+  }
+  tugas.push(tugasBaru);
+  console.log(tugas);
 
-// Sekarang kita manfaatkan itu. Ubah isi addEventListener menjadi:
-tombol.addEventListener("click", function(){
-    console.log(inputTugas.value);
+  // Langkah 12 — Kenapa tugas bisa terduplikasi?
+  daftarTugas.innerHTML = "";
+  // Langkah 11 — Menampilkan semua tugas dari Array
+  for (let i = 0; i < tugas.length; i++) {
+    if(tugas[i].selesai === false){
+    daftarTugas.innerHTML += `
+        <div class="flex items-center justify-between">
+            <div class="gap-2 flex items-center">
+                <input type="checkbox">
+                <span class="">${tugas[i].teks}</span>
+            </div>
+            <button>Hapus</button>
+        </div>`;
+  }};
 });
-
-// Langkah 9 — Menampilkan tugas ke halaman
-tombol.addEventListener("click", function(){
-    daftarTugas.textContent = inputTugas.value;
-});
-
-// Langkah 10 — Kenapa kita butuh Array?. Saat ini kita hanya punya satu tempat untuk menyimpan tugas: daftarTugas.textContent = inputTugas.value; Masalahnya, setiap klik berikutnya mengganti tugas sebelumnya. Kita butuh tempat untuk menyimpan banyak tugas.
-
