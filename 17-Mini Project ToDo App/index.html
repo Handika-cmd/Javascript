@@ -37,6 +37,27 @@
           <h2 class="text-xl text-gray-500 text-center font-bold mb-6">
             Daftar Tugas
           </h2>
+          <!-- Langkah 5.5 — Tombol filter Semua / Belum / Selesai -->
+          <div class="flex gap-2 mb-4">
+            <button
+              data-filter="semua"
+              class="filter-btn flex-1 bg-green-500 text-white rounded-lg py-1.5 cursor-pointer"
+            >
+              Semua
+            </button>
+            <button
+              data-filter="belum"
+              class="filter-btn flex-1 bg-gray-300 rounded-lg py-1.5 cursor-pointer"
+            >
+              Belum Selesai
+            </button>
+            <button
+              data-filter="selesai"
+              class="filter-btn flex-1 bg-gray-300 rounded-lg py-1.5 cursor-pointer"
+            >
+              Selesai
+            </button>
+          </div>
           <div id="daftarTugas" class="text-gray-500"></div>
         </div>
       </div>
