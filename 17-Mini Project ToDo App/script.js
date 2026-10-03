@@ -23,12 +23,28 @@ tombol.addEventListener("click", function () {
   for (let i = 0; i < tugas.length; i++) {
     if(tugas[i].selesai === false){
     daftarTugas.innerHTML += `
-        <div class="flex items-center justify-between">
-            <div class="gap-2 flex items-center">
-                <input type="checkbox">
+        <div class="flex items-center justify-between mb-2 border border-gray-500 rounded-lg p-2">
+            <div class="gap-2 flex items-center bg-blue-100 px-4 py-2 text-black rounded-lg w-64">
+                <input type="checkbox" data-id ="${tugas[i].id}">
                 <span class="">${tugas[i].teks}</span>
             </div>
-            <button>Hapus</button>
+            <button class ="bg-red-500 px-4 py-2 text-white mb-2 rounded-lg">Hapus</button>
         </div>`;
   }};
+
+  const checkbox = document.querySelectorAll('input[type="checkbox"]');
+
+  checkbox.forEach(function(item){
+    item.addEventListener("change", function(){
+      
+      const idTugas = Number(item.dataset.id);
+      const tugasDitemukan = tugas.find(function(tugasItem){
+        return tugasItem.id === idTugas;
+      });
+
+      tugasDitemukan.selesai = true;
+      console.log(tugasDitemukan);
+      console.log(tugas);
+    });
+  });
 });
