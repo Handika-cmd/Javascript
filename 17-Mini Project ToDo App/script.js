@@ -1,19 +1,23 @@
-// SETUP 1: Ambil semua elemen html
+// Langkah 1: JavaScript Kita ambil elemen yang ada di HTML dulu:
 const inputTugas = document.getElementById("inputTugas");
-const tombol = document.getElementById("tambahTugas");
-const daftarTugas = document.getElementById("daftartugas");
+const tambahTugas = document.getElementById("tambahTugas");
+const daftarTugas = document.getElementById("daftarTugas");
 
-// STEP 2: Buat array untuk menyimpan semua tugas
-const tugas =[];
+// Langkah 2: Buat array Kita butuh tempat menampung tugas yang dibuat user:
+const array =[];
 
-// =================================================================
-// STEP 3: BUAT HELPER FUNCTIONS:  buat fungsi-fungsi pembantu.
-// ===============================================================
-// fungsi 1: Validasi Tugas tidak boleh kosong
-function validasiTugas(teks){
-  if (teks.trim() === ""){
+// Langkah 3: Tambahkan event saat tombol diklik Sekarang kita dengarkan kejadian klik tombol:
+tambahTugas.addEventListener("click", function(){
+
+  const teksTugas = inputTugas.value.trim();
+
+  if (teksTugas === ""){
     alert("Tugas tidak boleh kosong");
-    return false;
+    return;
   }
-  return true;
-}
+
+  array.push(teksTugas);
+  daftarTugas.innerHTML += "<p>" + teksTugas + "</p>"
+  inputTugas.value === "";
+  inputTugas.focus();
+});
