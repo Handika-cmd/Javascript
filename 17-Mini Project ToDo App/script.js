@@ -4,20 +4,18 @@ const tambahTugas = document.getElementById("tambahTugas");
 const daftarTugas = document.getElementById("daftarTugas");
 
 // Langkah 2: Buat array Kita butuh tempat menampung tugas yang dibuat user:
-const array =[];
+tugas = [];
 
 // Langkah 3: Tambahkan event saat tombol diklik Sekarang kita dengarkan kejadian klik tombol:
 tambahTugas.addEventListener("click", function(){
+  // didalam ini kita buat pesan tidak boleh kosong
+  const hasilTugas = inputTugas.value.trim();
 
-  const teksTugas = inputTugas.value.trim();
-
-  if (teksTugas === ""){
-    alert("Tugas tidak boleh kosong");
-    return;
+  if(pesan === ""){
+    alert("Pesan tidak boleh kosong");
   }
 
-  array.push(teksTugas);
-  daftarTugas.innerHTML += "<p>" + teksTugas + "</p>"
-  inputTugas.value === "";
-  inputTugas.focus();
+  // Langkah 3: sekarang kita mau nampilin tugas yang ditampilin oleh user
+  tugas.push(hasilTugas);
+  
 });
