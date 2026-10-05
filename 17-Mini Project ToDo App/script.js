@@ -7,9 +7,8 @@ const tugasTersimpan = JSON.parse(dataTersimpan);
 
 let tugas = tugasTersimpan || [];
 
-tombol.addEventListener("click", function(){
-
-  if (inputTugas.value.trim() === ""){
+tombol.addEventListener("click", function () {
+  if (inputTugas.value.trim() === "") {
     alert("Isi nama tugasnya dulu ya!!");
     return;
   }
@@ -17,21 +16,47 @@ tombol.addEventListener("click", function(){
   daftarTugas.innerHTML += `
     <div class=" flex bg-blue-100 rounded-lg py-2 justify-between items-center p-2 mb-2">
     <span class="text-black">${inputTugas.value}</span>
-    <button class="p-2 w-32 bg-red-500 hover:bg-red-500 rounded-lg text-white">Hapus</button>
+    <button class="p-2 w-32 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
     </div>`;
-  
+
   tugas.push(inputTugas.value);
-  
+
   const dataJSON = JSON.stringify(tugas);
 
   localStorage.setItem("tugas", dataJSON);
 
+  inputTugas.value = "";
 });
 
-for (i =0; i < tugasTersimpan.length; i++){
+for (i = 0; i < tugasTersimpan.length; i++) {
   daftarTugas.innerHTML += `
     <div class=" flex bg-blue-100 rounded-lg py-2 justify-between items-center p-2 mb-2">
     <span class="text-black">${tugasTersimpan[i]}</span>
-    <button class="p-2 w-32 bg-red-500 hover:bg-red-800 rounded-lg text-white">Hapus</button>
+    <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
     </div>`;
-};
+}
+
+
+function tampilkanTugas() {
+  daftarTugas.innerHTML = "";
+  for (i = 0; i < tugas.length; i++) {
+    daftarTugas.innerHTML += `
+      <div class=" flex bg-blue-100 rounded-lg py-2                     justify-between items-center p-2 mb-2">
+          <span class="text-black">${tugas[i]}</span>
+
+          <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
+      </div>
+      `;
+  }
+
+  const hapus = document.querySelectorAll("[data-index]");
+  hapus.forEach(function (tombol) {
+    tombol.addEventListener("click", function () {
+      const indexTugas = tombol.dataset.index;
+      tugas.splice(Number(indexTugas), 1);
+      const dataJSON = JSON.stringify(tugas);
+      localStorage.setItem("tugas", dataJSON);
+
+    });
+  });
+}
