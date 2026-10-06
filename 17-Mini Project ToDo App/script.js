@@ -29,8 +29,13 @@ function tampilkanTugas() {
   for (i = 0; i < tugas.length; i++) {
     daftarTugas.innerHTML += `
       <div class=" flex bg-green-200 rounded-lg py-2 justify-between items-center p-2 mb-2">
-          <span class="text-black">${tugas[i]}</span>
-
+        <div class="flex gap-2">
+           <input 
+            type ="checkbox"
+            data-index ="${i}"
+          >
+          <span class="text-black">${tugas[i].nama}</span>
+        </div>
           <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
       </div>
       `;
