@@ -13,35 +13,22 @@ tombol.addEventListener("click", function () {
     return;
   }
 
-  daftarTugas.innerHTML += `
-    <div class=" flex bg-blue-100 rounded-lg py-2 justify-between items-center p-2 mb-2">
-    <span class="text-black">${inputTugas.value}</span>
-    <button class="p-2 w-32 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
-    </div>`;
-
   tugas.push(inputTugas.value);
 
   const dataJSON = JSON.stringify(tugas);
 
-  localStorage.setItem("tugas", dataJSON);
+  tampilkanTugas();
 
+  localStorage.setItem("tugas", dataJSON);
   inputTugas.value = "";
 });
-
-for (i = 0; i < tugasTersimpan.length; i++) {
-  daftarTugas.innerHTML += `
-    <div class=" flex bg-blue-100 rounded-lg py-2 justify-between items-center p-2 mb-2">
-    <span class="text-black">${tugasTersimpan[i]}</span>
-    <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
-    </div>`;
-}
 
 
 function tampilkanTugas() {
   daftarTugas.innerHTML = "";
   for (i = 0; i < tugas.length; i++) {
     daftarTugas.innerHTML += `
-      <div class=" flex bg-blue-100 rounded-lg py-2                     justify-between items-center p-2 mb-2">
+      <div class=" flex bg-green-200 rounded-lg py-2 justify-between items-center p-2 mb-2">
           <span class="text-black">${tugas[i]}</span>
 
           <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
@@ -56,7 +43,9 @@ function tampilkanTugas() {
       tugas.splice(Number(indexTugas), 1);
       const dataJSON = JSON.stringify(tugas);
       localStorage.setItem("tugas", dataJSON);
-
+      tampilkanTugas();
     });
   });
 }
+
+tampilkanTugas();
