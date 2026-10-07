@@ -13,7 +13,10 @@ tombol.addEventListener("click", function () {
     return;
   }
 
-  tugas.push(inputTugas.value);
+  tugas.push({
+    nama: inputTugas.value,
+    selesai: false
+  });
 
   const dataJSON = JSON.stringify(tugas);
 
@@ -33,6 +36,7 @@ function tampilkanTugas() {
            <input 
             type ="checkbox"
             data-index ="${i}"
+            ${tugas[i].selesai ? "checked" : ""}
           >
           <span class="text-black">${tugas[i].nama}</span>
         </div>
@@ -41,7 +45,7 @@ function tampilkanTugas() {
       `;
   }
 
-  const hapus = document.querySelectorAll("[data-index]");
+  const hapus = document.querySelectorAll("button[data-index]");
   hapus.forEach(function (tombol) {
     tombol.addEventListener("click", function () {
       const indexTugas = tombol.dataset.index;
@@ -51,6 +55,17 @@ function tampilkanTugas() {
       tampilkanTugas();
     });
   });
+
+  const checklist = document.querySelectorAll('input[type="checkbox"]');
+  checklist.forEach(function(checkbox){
+    checkbox.addEventListener("change", function(){
+      const indexTugas = Number(checkbox.dataset.index);
+      tugas[indexTugas].selesai  = checkbox.checked;
+      localStorage.setItem("tugas", JSON.stringify(tugas));
+
+      tampilkanTugas();
+    })
+  })
 }
 
 tampilkanTugas();
