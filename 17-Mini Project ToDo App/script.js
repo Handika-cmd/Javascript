@@ -1,7 +1,6 @@
 const inputTugas = document.getElementById("inputTugas");
 const tombol = document.getElementById("tambahTugas");
 const daftarTugas = document.getElementById("daftarTugas");
-
 const dataTersimpan = localStorage.getItem("tugas");
 const tugasTersimpan = JSON.parse(dataTersimpan);
 
@@ -20,9 +19,10 @@ tombol.addEventListener("click", function () {
 
   const dataJSON = JSON.stringify(tugas);
 
+  localStorage.setItem("tugas", dataJSON);
+
   tampilkanTugas();
 
-  localStorage.setItem("tugas", dataJSON);
   inputTugas.value = "";
 });
 
@@ -38,7 +38,7 @@ function tampilkanTugas() {
             data-index ="${i}"
             ${tugas[i].selesai ? "checked" : ""}
           >
-          <span class="text-black">${tugas[i].nama}</span>
+          <span class="${tugas[i].selesai ? "line-through": ""}">${tugas[i].nama}</span>
         </div>
           <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
       </div>
