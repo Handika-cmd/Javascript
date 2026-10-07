@@ -31,14 +31,14 @@ function tampilkanTugas() {
   daftarTugas.innerHTML = "";
   for (i = 0; i < tugas.length; i++) {
     daftarTugas.innerHTML += `
-      <div class=" flex bg-green-200 rounded-lg py-2 justify-between items-center p-2 mb-2">
+      <div class="${tugas[i].selesai ? "bg-transparent" : "bg-green-200"} flex bg-green-200 rounded-lg py-2 justify-between items-center p-2 mb-2">
         <div class="flex gap-2">
            <input 
             type ="checkbox"
             data-index ="${i}"
             ${tugas[i].selesai ? "checked" : ""}
           >
-          <span class="${tugas[i].selesai ? "line-through": ""}">${tugas[i].nama}</span>
+          <span class="${tugas[i].selesai ? "line-through text-gray-400": ""}">${tugas[i].nama}</span>
         </div>
           <button data-index="${i}" class="p-2 w-24 bg-red-500 hover:bg-red-700 rounded-lg text-white">Hapus</button>
       </div>
